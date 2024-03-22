@@ -38,7 +38,8 @@ app.use(express.urlencoded({ limit: "50mb" }))
 readdirSync('./src/routes').map((file) => app.use('/api/v1', require(`./src/routes/${file}`)));
 
 //Database connection
-const URI = 'mongodb+srv://AbdurRahim:<password>@cluster0.qooqrpl.mongodb.net/E-Commerce?retryWrites=true&w=majority'
+//const URI = 'mongodb+srv://AbdurRahim:<password>@cluster0.qooqrpl.mongodb.net/E-Commerce?retryWrites=true&w=majority'
+const URI = 'mongodb+srv://AbdurRahim:<password>@cluster0.ospelv8.mongodb.net/E-Commerce'
 const Option = { user: 'AbdurRahim', pass: 'up3UWfVQsKvmUpC7' }
 mongoose.connect(URI, Option)
     .then(() => {
